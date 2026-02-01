@@ -35,20 +35,17 @@ public class ConsumerDemo {
         // properties.setProperty("sasl.mechanism", "PLAIN");
 
         // Connect Aiven Cluster
+        // olhar arquivo client para chaves e senhas
         properties.put("bootstrap.servers", "kafka-227b8376-fernando-spizzca.c.aivencloud.com:27517");
         properties.put("security.protocol", "SSL");
         properties.put("ssl.protocol", "TLS");
 
-        properties.put("ssl.key.p", ""); //inserir .password AVNS_QT5n5bcsLRmCv206GLP
-
         // Keystore
         properties.put("ssl.keystore.location", "D:\\OneDrive\\Documentos\\Cursos\\Kafka\\certificados_aiven\\client.keystore.p12");
-        properties.put("ssl.keystore.p", ""); //inserir .password AVNS_QT5n5bcsLRmCv206GLP
         properties.put("ssl.keystore.type", "PKCS12");
 
         // Truststore
         properties.put("ssl.truststore.location", "D:\\OneDrive\\Documentos\\Cursos\\Kafka\\certificados_aiven\\client.truststore.jks");
-        properties.put("ssl.truststore.p", ""); //inserir .password AVNS_QT5n5bcsLRmCv206GLP
         properties.put("ssl.truststore.type", "JKS");
 
         // set Consumer properties
