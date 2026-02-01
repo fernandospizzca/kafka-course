@@ -40,17 +40,17 @@ public class ConsumerDemoCooperative {
         properties.put("bootstrap.servers", "kafka-227b8376-fernando-spizzca.c.aivencloud.com:27517");
         properties.put("security.protocol", "SSL");
         properties.put("ssl.protocol", "TLS");
-        // Opcional: senha específica da chave se for diferente da do keystore
-        properties.put("ssl.key.p", ""); //inserir .password AVNS_QT5n5bcsLRmCv206GLP
+        // Opcional: senha específica da chave se for diferente da do keystore 
+        properties.put("ssl.key.password", ""); // coletar no arquivo client
 
         // Keystore
         properties.put("ssl.keystore.location", "D:\\OneDrive\\Documentos\\Cursos\\Kafka\\certificados_aiven\\client.keystore.p12");
-        properties.put("ssl.keystore.p", ""); //inserir .password AVNS_QT5n5bcsLRmCv206GLP
+        properties.put("ssl.keystore.p", ""); // coletar no arquivo client
         properties.put("ssl.keystore.type", "PKCS12");
 
         // Truststore
         properties.put("ssl.truststore.location", "D:\\OneDrive\\Documentos\\Cursos\\Kafka\\certificados_aiven\\client.truststore.jks");
-        properties.put("ssl.truststore.p", ""); //inserir .password AVNS_QT5n5bcsLRmCv206GLP
+        properties.put("ssl.truststore.p", ""); // coletar no arquivo client
         properties.put("ssl.truststore.type", "JKS");
 
         // set Consumer properties
