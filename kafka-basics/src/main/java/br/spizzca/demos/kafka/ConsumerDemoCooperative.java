@@ -40,7 +40,7 @@ public class ConsumerDemoCooperative {
         properties.put("bootstrap.servers", "kafka-227b8376-fernando-spizzca.c.aivencloud.com:27517");
         properties.put("security.protocol", "SSL");
         properties.put("ssl.protocol", "TLS");
-        // Opcional: senha específica da chave se for diferente da do keystore 
+
         properties.put("ssl.key.password", ""); // coletar no arquivo client
 
         // Keystore
