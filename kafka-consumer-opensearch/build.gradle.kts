@@ -1,0 +1,34 @@
+plugins {
+    id("java")
+}
+
+group = "br.spizzca.demos"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // testImplementation(platform("org.junit:junit-bom:5.10.0"))
+    // testImplementation("org.junit.jupiter:junit-jupiter")
+    // testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+    // Source: https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients
+    implementation("org.apache.kafka:kafka-clients:4.1.1")
+    // Source: https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+    implementation("org.slf4j:slf4j-api:2.0.17")
+    // Source: https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
+    implementation("org.slf4j:slf4j-simple:2.0.17")
+
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
+    implementation("org.slf4j:slf4j-simple:1.7.36")
+    // https://search.maven.org/artifact/org.opensearch.client/opensearch-rest-high-level-client/1.2.4/jar
+    implementation("org.opensearch.client:opensearch-rest-high-level-client:1.3.2")
+    // https://search.maven.org/artifact/com.google.code.gson/gson/2.9.0/jar
+    implementation("com.google.code.gson:gson:2.9.0")
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
