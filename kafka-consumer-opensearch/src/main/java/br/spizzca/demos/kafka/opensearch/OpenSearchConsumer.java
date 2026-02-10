@@ -74,29 +74,29 @@ public class OpenSearchConsumer {
 
         // create consumer configs
         Properties properties = new Properties();
-//        properties.put(CommonClientConfigs.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
-        properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "kafka-227b8376-fernando-spizzca.c.aivencloud.com:27517");
+        properties.put(CommonClientConfigs.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
+//        properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "kafka-227b8376-fernando-spizzca.c.aivencloud.com:27517");
         properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         properties.put(ConsumerConfig.GROUP_ID_CONFIG, groupId);
         properties.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
         properties.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false");
 
-        // Connect Aiven Cluster
-        properties.put("security.protocol", "SSL");
-        properties.put("ssl.protocol", "TLS");
-        // Opcional: senha específica da chave se for diferente da do keystore
-        properties.put("ssl.key.password", "AVNS_QT5n5bcsLRmCv206GLP");
-
-        // Keystore
-        properties.put("ssl.keystore.location", "D:\\OneDrive\\Documentos\\Cursos\\Kafka\\certificados_aiven\\client.keystore.p12");
-        properties.put("ssl.keystore.password", "AVNS_QT5n5bcsLRmCv206GLP");
-        properties.put("ssl.keystore.type", "PKCS12");
-
-        // Truststore
-        properties.put("ssl.truststore.location", "D:\\OneDrive\\Documentos\\Cursos\\Kafka\\certificados_aiven\\client.truststore.jks");
-        properties.put("ssl.truststore.password", "AVNS_QT5n5bcsLRmCv206GLP");
-        properties.put("ssl.truststore.type", "JKS");
+//        // Connect Aiven Cluster
+//        properties.put("security.protocol", "SSL");
+//        properties.put("ssl.protocol", "TLS");
+//        // Opcional: senha específica da chave se for diferente da do keystore
+//        properties.put("ssl.key.password", "AVNS_QT5n5bcsLRmCv206GLP");
+//
+//        // Keystore
+//        properties.put("ssl.keystore.location", "D:\\OneDrive\\Documentos\\Cursos\\Kafka\\certificados_aiven\\client.keystore.p12");
+//        properties.put("ssl.keystore.password", "AVNS_QT5n5bcsLRmCv206GLP");
+//        properties.put("ssl.keystore.type", "PKCS12");
+//
+//        // Truststore
+//        properties.put("ssl.truststore.location", "D:\\OneDrive\\Documentos\\Cursos\\Kafka\\certificados_aiven\\client.truststore.jks");
+//        properties.put("ssl.truststore.password", "AVNS_QT5n5bcsLRmCv206GLP");
+//        properties.put("ssl.truststore.type", "JKS");
 
         // create consumer
         return new KafkaConsumer<>(properties);
